@@ -1,15 +1,25 @@
 # gwu-website-template
 
-> Template for creating your own GWU chapter website
+> Template for creating your own GWU chapter website using web's best practices
 
 ## Installation
 
 To make your own copy of the templated website
 
 1. [Fork this repository](https://github.com/Cobertos/GWU-website-template/fork)
-2. TODO
+TODO:
+2. Configure GitHub Actions...
+3. Trigger GitHub Actions...
+4. Use a Content Delivery Network (CDN) (recommended, but not required)
+ 1. Cloudflare suggestion w/ pictures...
 
-## Contributing Setup
+To use a third party host (Amazon S3, Netlify), the process is similar but you will need to swap out the GitHub action for deploying to gh-pages with one that deploys to the service you'd like to use.
+
+## Contributing
+
+This website is built on [Nuxt.js](https://nuxtjs.org) and is meant to be built as a static website. This means the website functions as-is and can be deployed to any static content host after being compiled. It requires no CMS or server-side components meaning a lot less management overhead.
+
+It is meant to support IE11, Edge, Firefox, Chrome, and Safari. If you have a bug please submit a report.
 
 ``` bash
 # install dependencies

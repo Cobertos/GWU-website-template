@@ -1,0 +1,51 @@
+//SCSS stuff used in other files (variables, functions, etc)
+
+/**Calculates a rems value given a pixel value $size for a rems/vw workflow. In this
+ * case our base font size is 16px
+ * You can read more on this technique on a site like
+ * https://www.smashingmagazine.com/2016/05/fluid-typography/
+ * Example:
+ * ```
+ * left: calcRems(20px);
+ * ```
+ * @param {number} $size The size to convert in px
+ * @returns {number} The converted rems size
+ */
+@function calcRems($size) {
+  @return $size / 16px * 1rem;
+}
+
+/**Calculates a rems value using a given percentage $pct. In this case our base
+ * percentage used on body is 2.5vw. Useful for taking a percentage of the 
+ * screen width and applying all the same scaling/stopping points our rems
+ * experience
+ * Example:
+ * ```
+ * width: calcPct(20); //20 percent of the viewport width
+ * ```
+ * @param {number} $pct The percentage to convert, without the trailing %
+ * @returns {number} The converted rems size
+ */
+@function calcPct($pct) {
+  @return $pct / 2.5 * 1rem;
+}
+
+/**A mixin to enable specific content when it's on a screen that's larger than
+ * our mobile breakpoint.
+ */
+@mixin desktop {
+  @media only screen and (min-width : 768px) {
+    @content;
+  }
+}
+
+//Variables
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,700&display=swap');
+$bold: 700;
+
+$montserrat: 'Montserrat', sans-serif; //Title text
+$roboto: 'Roboto', sans-serif;         //Body text
+
+$black: #000;
+$grey: #EFEFEF;
+$white: #FFF;
