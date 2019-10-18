@@ -6,12 +6,12 @@
  * https://www.smashingmagazine.com/2016/05/fluid-typography/
  * Example:
  * ```
- * left: calcRems(20px);
+ * left: cRems(20px);
  * ```
  * @param {number} $size The size to convert in px
  * @returns {number} The converted rems size
  */
-@function calcRems($size) {
+@function cRems($size) {
   @return $size / 16px * 1rem;
 }
 
@@ -21,12 +21,12 @@
  * experience
  * Example:
  * ```
- * width: calcPct(20); //20 percent of the viewport width
+ * width: cPct(20); //20 percent of the viewport width
  * ```
  * @param {number} $pct The percentage to convert, without the trailing %
  * @returns {number} The converted rems size
  */
-@function calcPct($pct) {
+@function cPct($pct) {
   @return $pct / 2.5 * 1rem;
 }
 
@@ -49,3 +49,5 @@ $roboto: 'Roboto', sans-serif;         //Body text
 $black: #000;
 $grey: #EFEFEF;
 $white: #FFF;
+$darkGrey: #555;
+$blurple: #7289DA;

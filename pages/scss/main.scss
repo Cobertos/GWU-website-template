@@ -11,12 +11,12 @@
   //definitely require another breakpoint)
   //Adding fixed px values acts weird b/c while it shifts up, at small viewport sizes
   //it will outweigh the viewport width and seem to "slow down" scaling
-  //Also see _func.scss calcRems() and calcPct()
+  //Also see _func.scss cRems() and cPct()
   font-size: 2.5vw;
   font-family: $roboto;
   background-color: $black;
   color: $grey;
-  line-height: 1.8;
+  line-height: 1.4;
 
   //In desktop breakpoint, we are static at the given font-size
   @include desktop {
@@ -27,9 +27,14 @@
 body, html {
   margin:0;
   padding:0;
+  scroll-behavior: smooth; //Chrome and FF only
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
 }
 
-main, footer {
+main, footer, section, aside, header, nav, article {
   display: block; //ie11 :(
 }
 
@@ -41,18 +46,20 @@ img {
   display: block;
 }
 
-//TODO:
-/*a, a:visited, a:active {
-  color: $darkBlue;
+a:not(.button), a:visited:not(.button), a:active:not(.button) {
+  display: inline-block;
+  color: darken($grey, 15%);
 }
-a:hover {
-  color: lighten($darkBlue,10%);
-}*/
+a:hover:not(.button) {
+  background-color: lighten($black, 20%);
+}
 
 p, ul, li, .base-text {
-  font-size: 11px;
+  list-style:initial;
+
+  font-size: cRems(24px);
   @include desktop {
-    font-size: cRems(11px);
+    font-size: cRems(16px);
   }
 }
 
@@ -62,24 +69,65 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  font-size: cRems(45px);
+  display: inline-block;
+  position: relative;
+  font-size: cRems(47px);
+  margin: cRems(20px) 0;
+
   @include desktop {
     font-size: cRems(30px);
+  }
+
+  &:after {
+    content:'';
+    display:block;
+    width: 100%;
+    height: cRems(1px);
+    background-color: $grey;
+    position: absolute;
+    bottom: cRems(2px);
+    left: 0;
   }
 }
 
 h3 {
-  font-size: cRems(40px);
+  font-size: cRems(42px);
+  margin: cRems(15px) 0;
   @include desktop {
     font-size: cRems(26px);
   }
 }
 
 h4 {
-  font-size: cRems(35px);
+  font-size: cRems(38px);
+  margin: cRems(10px) 0;
   @include desktop {
     font-size: cRems(22px);
   }
 }
 
-@import "_index";
+button, .button {
+  display: inline-block;
+  background-color: $grey;
+  padding: cRems(10px);
+  border-radius: cRems(5px);
+  border: none;
+  box-shadow: 0px cRems(3px) cRems(6px) cRems(1px) rgba(255,255,255,0.4);
+  cursor: pointer;
+  font-size: cRems(32px);
+  font-weight: $bold;
+  color: $black;
+  text-decoration: none;
+  transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+  line-height: 1;
+
+  &:hover {
+    background-color: $darkGrey;
+    color: $grey;
+    box-shadow: 0px cRems(3px) cRems(10px) cRems(2px) darken(rgba(255,255,255,0.4), 10%);
+  }
+
+  @include desktop {
+    font-size: cRems(20px);
+  }
+}

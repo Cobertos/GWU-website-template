@@ -15,6 +15,8 @@ TODO:
 
 To use a third party host (Amazon S3, Netlify), the process is similar but you will need to swap out the GitHub action for deploying to gh-pages with one that deploys to the service you'd like to use.
 
+If you have any questions, feel free to make an issue (TODO LINK)
+
 ## Contributing
 
 This website is built on [Nuxt.js](https://nuxtjs.org) and is meant to be built as a static website. This means the website functions as-is and can be deployed to any static content host after being compiled. It requires no CMS or server-side components meaning a lot less management overhead.

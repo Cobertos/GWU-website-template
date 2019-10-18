@@ -13,5 +13,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'semi': ['error', 'always'],
+    'spaced-comment': 'off',
+    'no-multi-spaces': 'off'
   }
 }
