@@ -25,7 +25,7 @@ jobs:
       - name: Install nuxt
         run: npm install nuxt
       - name: Production Build
-        run: nuxt generate --fail-on-page-error
+        run: npx nuxt generate --fail-on-page-error
       # Make sure you add the GH_PAT secret to the .github actions
       # Will eventually not need GH_PAT and will be able to use GITHUB_TOKEN in a coming PR
       - uses: maxheld83/ghpages@v0.2.1
