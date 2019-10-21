@@ -22,8 +22,6 @@ jobs:
           node-version: 10.x
       - name: npm ci
         run: npm ci
-      - name: Install nuxt
-        run: npm install nuxt
       - name: Production Build
         run: npx nuxt generate --fail-on-page-error
       # Make sure you add the GH_PAT secret to the .github actions
