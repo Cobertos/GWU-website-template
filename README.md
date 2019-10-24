@@ -1,3 +1,8 @@
+<p align="center">
+    <a href="https://twitter.com/cobertos" target="_blank"><img alt="twitter" src="https://img.shields.io/badge/twitter-%40cobertos-0084b4.svg"></a>
+    <a href="https://cobertos.com" target="_blank"><img alt="twitter" src="https://img.shields.io/badge/website-cobertos.com-888888.svg"></a>
+</p>
+
 # GWU-website-template
 
 Template for creating your own GWU chapter website using web's best practices, all editable and deployable from GitHub. View the live demo: https://cobertos.github.io/GWU-website-template
