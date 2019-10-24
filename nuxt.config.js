@@ -32,7 +32,8 @@ export default {
       { name: 'twitter:site', content: '@GWU_Detroit' }
     ],
     link: [
-      { rel: 'shortcut icon', type: 'image/png', href: 'favicon.png' }
+      { rel: 'shortcut icon', type: 'image/png', href: 'favicon.png' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,700&display=swap' }
     ]
   },
   /*
