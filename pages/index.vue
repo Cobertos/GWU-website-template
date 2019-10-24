@@ -17,7 +17,7 @@
       </section>
       <section id="join-up" class="join-up-container">
         <h2>Join Up!</h2>
-        <p>Want to join GWU Detroit? Cool! Fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZPfnaz-3kv1IYEQngyeKhVR2O0lQTA95lwOzTzhvu-1EOjA/viewform">application form</a>, wait for acceptance, and you'll be joining 26+ other members in our Discord.</p>
+        <p>Want to join GWU Detroit? Cool! Fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZPfnaz-3kv1IYEQngyeKhVR2O0lQTA95lwOzTzhvu-1EOjA/viewform" target="_blank">application form</a>, wait for acceptance, and you'll be joining 26+ other members in our Discord.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZPfnaz-3kv1IYEQngyeKhVR2O0lQTA95lwOzTzhvu-1EOjA/viewform" target="_blank" class="button application-form-button" ><font-awesome-icon :icon="['far', 'file-alt']" /> Application Form</a>
         <p>We hold a meeting every month on the first Friday. Our next one is on {{ displayMeeting.format('dddd, MMMM Do, ha') }}. Hope to see you there!</p>
       </section>
@@ -25,7 +25,8 @@
         <h2>Conact Us!</h2>
         <p>Get in touch with us</p>
         <ul>
-          <li><a href="#">Email us</a></li>
+          <li><a href="https://twitter.com/gwu_detroit" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /> @GWU_Detroit</a></li>
+          <li><a href="#"><font-awesome-icon :icon="['fas', 'envelope-open-text']" /> Email us</a></li>
         </ul>
       </section>
     </div>

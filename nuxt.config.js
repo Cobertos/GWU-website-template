@@ -32,7 +32,7 @@ export default {
       { name: 'twitter:site', content: '@GWU_Detroit' }
     ],
     link: [
-      { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' }
+      { rel: 'shortcut icon', type: 'image/png', href: 'favicon.png' }
     ]
   },
   /*
@@ -43,6 +43,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -69,7 +70,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend (config, { isDev }) {
+      if (!isDev) {
+        // relative links, please.
+        config.output.publicPath = './_nuxt/'
+      }
+      return config;
     }
   }
 }
